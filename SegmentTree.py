@@ -13,9 +13,8 @@ class SegmentTree:
             return arr[l]
 
         m = (l + r) // 2
-        leftRange = self.__construct_tree(arr, l, m, 2 * i)
-        rightRange = self.__construct_tree(arr, m, r, 2 * i + 1)
-        self.tree[i] = leftRange + rightRange
+        self.tree[i] = self.__construct_tree(arr, l, m, 2 * i) + \
+                       self.__construct_tree(arr, m, r, 2 * i + 1)
         return self.tree[i]
     
     def update(self, j, val):
