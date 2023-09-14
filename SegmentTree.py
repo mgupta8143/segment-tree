@@ -1,3 +1,11 @@
+"""
+By: Manu Gupta
+
+I got bored one night and felt like playing around.
+It would be interesting to make this segment tree generic to lambdas that control
+how ranges are updated
+"""
+
 class SegmentTree:
     def __init__(self, arr):
         if len(arr) <= 0:
@@ -60,7 +68,7 @@ class SegmentTree:
         else:
             return self.__get_helper(range_l, m, l, m, 2 * i) + \
                    self.__get_helper(m, range_r, m, r, 2 * i  + 1)
-
+        
 arr = [1, 2, 3, 4, 5, 6, 7, 8]
 st = SegmentTree(arr)
 print(st.tree)
