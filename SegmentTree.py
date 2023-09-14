@@ -2,8 +2,14 @@
 By: Manu Gupta
 
 I got bored one night and felt like playing around.
+
+Cool Futue Things to Do:
 It would be interesting to make this segment tree generic to lambdas that control
 how ranges are updated
+
+also if we can make this generic to multi-dimensional arrays like tensors
+
+also, if we support an update range function
 """
 
 class SegmentTree:
